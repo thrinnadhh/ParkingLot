@@ -27,3 +27,45 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# IntelliJ IDEA
+../.idea/
+*.iws
+*.iml
+*.ipr
+
+# Compiler output
+/out/
+target/
+build/
+
+# Logs
+*.log
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Java class files
+*.class
+
+# Maven
+.mvn/
+!**/src/main/**/.gitkeep
+!**/src/test/**/.gitkeep
+
+# Gradle
+.gradle/
+build/
+!gradle-wrapper.jar
+
+# Environment files
+.env
+*.env
+
+# Backup files
+*.swp
+*~
+
+# Lombok generated files
+lombok.config

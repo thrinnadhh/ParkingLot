@@ -9,6 +9,10 @@ import java.util.TreeMap;
 
 public class ParkingLotRepository {
     Map<Long , ParkingLot> parkingLotStore = new TreeMap<>();
+    GateRepository gateRepository;
+    public ParkingLotRepository(GateRepository gateRepository){
+        this.gateRepository = gateRepository;
+    }
     private Long keyVal = 0L;
     public ParkingLot save(ParkingLot parkingLot){
         parkingLot.setId(++keyVal);

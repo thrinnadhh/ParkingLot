@@ -3,8 +3,8 @@ package Strategy;
 import model.SlotAllocationStrategyType;
 
 public class SlotAllocationFactory {
-    public static SlotAllocationStrategy getSlotAllocationStrategy(SlotAllocationStrategy slotAllocationStrategy){
-        if(slotAllocationStrategy.equals(SlotAllocationStrategyType.RANDOM)){
+    public static SlotAllocationStrategy getSlotAllocationStrategy(SlotAllocationStrategyType slotAllocationStrategyType){
+        if(slotAllocationStrategyType.equals(SlotAllocationStrategyType.RANDOM)){
             return new RandomAllocationSlotStrategy();
         }
         else{

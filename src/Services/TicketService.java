@@ -4,6 +4,7 @@ import Repository.GateRepository;
 import Repository.ParkingLotRepository;
 import Repository.TicketRepository;
 import Repository.VehicleRepository;
+import Strategy.SlotAllocationFactory;
 import Strategy.SlotAllocationStrategy;
 import model.*;
 
@@ -15,7 +16,7 @@ public class TicketService {
     VehicleRepository vehicleRepository;
     ParkingLotRepository parkingLotRepository;
     TicketRepository ticketRepository;
-    public TicketService(GateRepository gateRepository,VehicleRepository vehicleRepository,ParkingLotRepository parkingLotRepository,TicketRepository ticketRepository) {
+    public TicketService(GateRepository gateRepository,VehicleRepository vehicleRepository,TicketRepository ticketRepository) {
         this.gateRepository = gateRepository;
         this.vehicleRepository = vehicleRepository;
         this.parkingLotRepository = parkingLotRepository;
@@ -55,7 +56,7 @@ public class TicketService {
         }
 //        Setting up the parkingslot
         parkingLot = gate.getParkingLot();
-        SlotAllocationStrategy slotAllocationStrategy = parkingLot.getSlotAllocationStrategy();
+        SlotAllocationStrategy slotAllocationStrategy = SlotAllocationFactory.getSlotAllocationStrategy(SlotAllocationStrategyType.RANDOM);
         ticket.setParkingSlot(slotAllocationStrategy.AllocationOfSlot(vehicleType,parkingLot));
         return ticketRepository.save(ticket);
     }

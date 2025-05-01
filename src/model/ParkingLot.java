@@ -5,28 +5,23 @@ import Strategy.SlotAllocationStrategy;
 import java.util.List;
 
 public class ParkingLot extends BaseClass{
-    Integer parkingNumber;
+    String parkingName;
     List<ParkingFloor> parkingFloors;
-    SlotAllocationStrategy slotAllocationStrategy;
+    SlotAllocationStrategyType slotAllocationStrategyType;
     List<Gate> entryGates;
     List<Gate> exitGates;
     ParkingLotStatus parkingLotStatus;
 
-    public ParkingLot(Integer parkingNumber, List<ParkingFloor> parkingFloors, SlotAllocationStrategy slotAllocationStrategy, List<Gate> entryGates, List<Gate> exitGates, ParkingLotStatus parkingLotStatus) {
-        this.parkingNumber = parkingNumber;
-        this.parkingFloors = parkingFloors;
-        this.slotAllocationStrategy = slotAllocationStrategy;
-        this.entryGates = entryGates;
-        this.exitGates = exitGates;
-        this.parkingLotStatus = parkingLotStatus;
+    public ParkingLot(String parkingName){
+        this.parkingName = parkingName;
     }
 
-    public Integer getParkingNumber() {
-        return parkingNumber;
+    public String getParkingNumber() {
+        return parkingName;
     }
 
     public void setParkingNumber(Integer parkingNumber) {
-        this.parkingNumber = parkingNumber;
+        this.parkingName = parkingName;
     }
 
     public List<ParkingFloor> getParkingFloors() {
@@ -37,12 +32,12 @@ public class ParkingLot extends BaseClass{
         this.parkingFloors = parkingFloors;
     }
 
-    public SlotAllocationStrategy getSlotAllocationStrategy() {
-        return slotAllocationStrategy;
+    public SlotAllocationStrategyType getSlotAllocationStrategyType() {
+        return slotAllocationStrategyType;
     }
 
-    public void setSlotAllocationStrategy(SlotAllocationStrategy slotAllocationStrategy) {
-        this.slotAllocationStrategy = slotAllocationStrategy;
+    public void setSlotAllocationStrategy(SlotAllocationStrategyType slotAllocationStrategyType) {
+        this.slotAllocationStrategyType = slotAllocationStrategyType;
     }
 
     public List<Gate> getEntryGates() {

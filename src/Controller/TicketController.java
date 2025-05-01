@@ -1,6 +1,7 @@
 package Controller;
 
 import DTOs.TicketRequestDTO;
+import DTOs.TicketResponseDTO;
 import Services.TicketService;
 import model.Ticket;
 
@@ -11,7 +12,7 @@ public class TicketController {
         this.ticketService = ticketService;
     }
 
-    public TicketRequestDTO createTicket(TicketRequestDTO ticketRequestDTO) {
+    public TicketResponseDTO createTicket(TicketRequestDTO ticketRequestDTO) {
         ticketService.createTicket(ticketRequestDTO.getOwnerName(),
                 ticketRequestDTO.getContactNumber(),
                 ticketRequestDTO.getLicenseNumber(),
