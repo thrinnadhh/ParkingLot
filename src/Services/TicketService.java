@@ -52,7 +52,9 @@ public class TicketService {
             vehicle = optionalVehicle.get();
             ticket.setVehicle(vehicle);
         }else{
-            throw new RuntimeException("Vehicle not found");
+            vehicle = new Vehicle(ownerName,contactNumber,licenseNumber,vehicleType);
+            vehicleRepository.save(vehicle);
+            ticket.setVehicle(vehicle);
         }
 //        Setting up the parkingslot
         parkingLot = gate.getParkingLot();

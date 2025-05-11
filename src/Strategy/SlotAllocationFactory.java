@@ -8,7 +8,7 @@ public class SlotAllocationFactory {
             return new RandomAllocationSlotStrategy();
         }
         else{
-            throw new RuntimeException("No such slot allocation strategy is found");
+            throw new RuntimeException("No Slot Allocation Strategy Found");
         }
     }
 }

@@ -3,8 +3,8 @@ package Strategy;
 import model.*;
 
 public class RandomAllocationSlotStrategy implements SlotAllocationStrategy {
-    @Override
-    public ParkingSlot AllocationSlot(VehicleType vehicleType, ParkingLot parkingLot) {
+
+    public ParkingSlot AllocationOfSlot(VehicleType vehicleType, ParkingLot parkingLot) {
         // Implementation of random allocation of slot strategy
         // This method should contain the logic to randomly allocate a parking slot
         // based on the vehicle type and the available slots in the parking lot.

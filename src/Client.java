@@ -55,10 +55,10 @@ public class Client {
         parkingFloor.setParkingFloorStatus(ParkingFloorStatus.Open);
 
         List<ParkingSlot> parkingSlots = new ArrayList<>();
-        parkingSlots.add(new ParkingSlot(1, ParkingSlotStatus.FREE, new SupportedVehicle(VehicleType.SMALL_FOUR_WHEELER, 1)));
-        parkingSlots.add(new ParkingSlot(2, ParkingSlotStatus.FREE, new SupportedVehicle(VehicleType.SMALL_FOUR_WHEELER, 1)));
-        parkingSlots.add(new ParkingSlot(3, ParkingSlotStatus.FREE, new SupportedVehicle(VehicleType.LARGE_FOUR_WHEELER, 1)));
-        parkingSlots.add(new ParkingSlot(4, ParkingSlotStatus.FREE, new SupportedVehicle(VehicleType.TWO_WHEELER, 1)));
+        parkingSlots.add(new ParkingSlot(1, ParkingSlotStatus.FREE, new SupportedVehicle(VehicleType.SMALL_FOUR_WHEELER, 2)));
+        parkingSlots.add(new ParkingSlot(2, ParkingSlotStatus.FREE, new SupportedVehicle(VehicleType.SMALL_FOUR_WHEELER, 2)));
+        parkingSlots.add(new ParkingSlot(3, ParkingSlotStatus.FREE, new SupportedVehicle(VehicleType.LARGE_FOUR_WHEELER, 2)));
+        parkingSlots.add(new ParkingSlot(4, ParkingSlotStatus.FREE, new SupportedVehicle(VehicleType.TWO_WHEELER, 2)));
         parkingFloor.setParkingSlots(parkingSlots);
 
         List<ParkingFloor> parkingFloorList = new ArrayList<>();
