@@ -17,13 +17,21 @@ A Java-based Parking Lot system built using **pure object-oriented programming**
 ## 🏗️ Architecture
 
 ParkingLot/
+
 ├── controllers/
+|
 ├── dtos/
+|
 ├── factories/
+|
 ├── models/
+|
 ├── repositories/
+|
 ├── services/
+|
 ├── strategies/
+|
 └── Main.java
 
 
