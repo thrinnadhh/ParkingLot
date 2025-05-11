@@ -16,7 +16,16 @@ A Java-based Parking Lot system built using **pure object-oriented programming**
 
 ## 🏗️ Architecture
 
-<pre lang="markdown"> ## 📁 Project Structure ``` ParkingLot/ ├── controllers/ # Handles input logic ├── dtos/ # Request/Response DTOs ├── factories/ # Factory classes for slot strategy creation ├── models/ # Vehicle, Ticket, Slot, etc. ├── repositories/ # In-memory storage (ORM-like) ├── services/ # Business logic layer ├── strategies/ # Slot assignment strategies └── Main.java # Entry point ``` </pre>
+ParkingLot/
+├── controllers/          # Handles input logic
+├── dtos/                 # Request/Response DTOs
+├── factories/            # Factory classes for slot strategy creation
+├── models/               # Vehicle, Ticket, Slot, etc.
+├── repositories/         # In-memory storage (ORM-like)
+├── services/             # Business logic layer
+├── strategies/           # Slot assignment strategies
+└── Main.java             # Entry point
+
 
 - **Model**: Vehicle, Ticket, Slot, Gate, etc.  
 - **Controller**: Entry point handlers  
