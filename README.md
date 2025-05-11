@@ -1,34 +1,21 @@
-🚗 Parking Lot Management System
-A Java-based Parking Lot system built using pure object-oriented programming (OOP) principles. The system is structured using the MVC architecture, with DTOs, ORM-like in-memory storage, and the Factory Design Pattern for extensible slot allocation strategies.
+# 🚗 Parking Lot Management System
 
-✅ Features
-Vehicle entry/exit and ticket generation
+A Java-based Parking Lot system built using **pure object-oriented programming** (OOP). The application follows the **MVC architecture**, uses **DTOs**, simulates ORM behavior with in-memory repositories, and applies the **Factory Design Pattern** for dynamic slot allocation strategies.
 
-Slot allocation per vehicle type (bike, car, truck, etc.)
+---
 
-Strategy-based parking using Factory pattern
+## 📌 Features
 
-In-memory storage using Java collections
+- Entry/exit of vehicles with ticket generation
+- Vehicle type–based slot allocation
+- Strategy-driven parking logic (via Factory pattern)
+- In-memory storage using Java collections (no database)
+- DTOs for data exchange between layers
 
-Clear separation of concerns (Controller, Service, Model, Repository)
+---
 
-🧱 Architecture Overview
-Model Layer: Represents domain objects (Vehicle, Ticket, Slot, Gate)
+## 🏗️ Architecture
 
-Controller Layer: Handles input and routes to services
-
-Service Layer: Business logic for ticketing and slot assignment
-
-DTO Layer: Clean separation for requests/responses
-
-Repository Layer (ORM): Stores and retrieves objects using in-memory maps
-
-Factory Pattern: Used to plug different slot assignment strategies (e.g., nearest slot first)
-
-📂 Project Structure
-css
-Copy
-Edit
 ParkingLot/
 ├── controllers/
 ├── dtos/
@@ -38,29 +25,34 @@ ParkingLot/
 ├── services/
 ├── strategies/
 └── Main.java
-🏃‍♂️ How to Run
-Open the project in any Java IDE (e.g., IntelliJ, Eclipse)
 
-Run the Main.java file directly
 
-Interact with the console to simulate vehicle entry and slot allocation
+- **Model**: Vehicle, Ticket, Slot, Gate, etc.  
+- **Controller**: Entry point handlers  
+- **Service**: Business logic (e.g. `TicketService`)  
+- **DTOs**: Input/output abstraction  
+- **Repositories**: In-memory ORM (Java Maps)  
+- **Factories/Strategies**: For dynamic slot assignment logic
 
-🧠 Design Patterns Used
-Factory Pattern: Creates the correct SlotAssignmentStrategy based on context
+---
 
-Strategy Pattern: Different slot assignment logics (e.g., nearest slot, random slot)
+## 🧠 Design Patterns Used
 
-DTO Pattern: Clean data transfer between UI and service layers
+- **Factory Pattern** – to produce slot assignment strategies  
+- **Strategy Pattern** – to apply different parking logics  
+- **DTO Pattern** – to cleanly transfer request/response data
 
-🛠 Requirements
-Java 8 or above
+---
 
-No build tools required (no Maven/Gradle)
+## 🛠️ How to Run
 
-Just compile and run using your IDE or terminal:
+> This project is implemented with **no frameworks**, **no Maven**, and **no external libraries**.
 
-bash
-Copy
-Edit
-javac Main.java
-java Main
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/ParkingLot.git
+   cd ParkingLot/src
+2.Compile and Run
+```bash
+  javac Main.java
+  java Main
